@@ -9,3 +9,4 @@ const bot = new TelegramBot(Token, {
 bot.on('message',(msg)=>{
     console.log(msg)
 })
+// test git pull
