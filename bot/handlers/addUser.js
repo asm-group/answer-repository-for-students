@@ -1,6 +1,6 @@
 let botUtils = require('../botUtils');
 let userService = require('../../services/userService');
-
+let {course} = require('../../models/dicts')
 function addStartHandler(bot) {
     let clientMessage = new RegExp('\/start');
 
@@ -11,23 +11,13 @@ function addStartHandler(bot) {
 // test git pull
 
 // Конфиг клавиатуры
-    const keyboard = [
-        [
-            {
-                text: '1 курс', // текст на кнопке
-            }
-        ],
-         [
-             {
-                text: '2 курс',
-             }
-         ],
-        ];
+    const keyboard = [course];
 
     bot.on('message', (msg) => {
         const chatId = msg.chat.id; //получаем идентификатор диалога
 
         let message = '';
+        //TODO: Сначала выводим предметы позже тип задач(пс написал потому что хз мб правильно по другому тк в некоторых предметах нет лаб или еще какой либо хуеты)
 
         //отправляем сообщение
         if (msg.text === '/start') {
