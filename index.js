@@ -1,12 +1,10 @@
-const TelegramBot = require('node-telegram-bot-api')
+const MongoClient = require('mongodb').MongoClient;
 
-const Token = ''
+let createBot = require('./bot/createBot');
+let fs = require('fs');
 
-const bot = new TelegramBot(Token, {
-    polling: true
-})
+let config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 
-bot.on('message',(msg)=>{
-    console.log(msg)
-})
-// test git pull
+MongoClient.connect(config.development.connectionString, {useNewUrlParser: true, useUnifiedTopology: true}).then();
+let bot = createBot(config.development.telegramToken);
+

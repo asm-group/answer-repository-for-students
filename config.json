@@ -1,0 +1,10 @@
+{
+  "production": {
+    "telegramToken": "1805807907:AAHVnAEQTZBctXQwmZt_GX6k-0TeBJImGwA",
+    "connectionString": "mongodb+srv://max:rfifvfkfif2000@cluster0.ugq8i.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  },
+  "development": {
+    "telegramToken": "1805807907:AAHVnAEQTZBctXQwmZt_GX6k-0TeBJImGwA",
+    "connectionString": "mongodb+srv://max:rfifvfkfif2000@cluster0.ugq8i.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  }
+}

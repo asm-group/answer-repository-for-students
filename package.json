@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "mongoose": "^5.12.12",
     "node-telegram-bot-api": "^0.53.0"
+  },
+  "devDependencies": {
+    "mongodb": "^3.6.9"
   }
 }
